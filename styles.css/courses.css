@@ -1,0 +1,142 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 150px;
+   /* margin-left: -100px; */
+}
+
+
+
+.courses , .courses1, .redirector {
+        font-size: 40px;
+        font-weight: 400;
+        text-align: center;
+        /* text-decoration: underline rgb(83, 50, 202); */
+        /* margin-top: 200px; */
+}
+
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  /* background-size: cover; */
+  display: block;
+  object-fit: cover;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  display: flex;
+  /* display: block; */
+  flex-wrap: wrap;
+  list-style: none;
+  /* margin: 80px; */
+  padding: 40px;
+
+  /* margin-bottom: 100px; */
+  /* margin-left: 00px; */
+}
+
+.cards_item {
+  display:block;
+  padding: 1rem;
+  /* margin-left: 40px; */
+
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0px;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #DED0B6 40%, #FFC39E 100%);
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+
+.learn{
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right bottom, #0b25d4, #1424a0, #1b206e, #1b1a3e, #111111);
+    margin-left: 40px;
+    transition: 1s;
+    color: aliceblue;
+    font-size: large;
+    box-shadow: 0px 20px 40px -14px rgba(0, 0,0,0.25);
+    
+
+
+}
+.learn:hover{
+    transform: scaleY(1.4);
+    transform: scaleX(1);
+    cursor: pointer;
+    
+    background-image: linear-gradient(to right bottom, #0b25d4, #1424a0, #1b206e, #1b1a3e, #111111);
+}

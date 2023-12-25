@@ -1,0 +1,129 @@
+body{
+  background-image: url("/images/bg.jpg");
+  
+}
+.abcon{
+  background-color: white;
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 1rem;
+  margin-top: 5em;
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.abhead h1 {
+  text-align: center;
+  padding-top: 16rem;
+  padding-right: 2rem;
+  color:aliceblue;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.slog {
+  margin-top: 2rem;
+  text-align: center;
+  color: rgb(252, 252, 227);
+  padding-right: 2rem;
+}
+
+div.abtcon1 , div.abtcont2{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #4d4433;
+    font-weight:500 ;
+}
+div.par1 ,div.par3{
+ width: 700px;
+}
+.logob img{
+    width: 15rem;
+    align-self: center;
+    justify-self: center;
+}
+div.par3{
+    justify-self: center;
+    align-self: center;
+}
+.par2 h3{
+    text-align: center;
+    color: #3887be;
+}
+.par2 li{
+    margin-top: 0.5rem;
+}
+.logob {
+    transition: transform 0.5s ease; /* Set transition properties */
+  }
+
+  /* Additional styles for the animation */
+  .logob.slide-left {
+    transform: translateX(-89%); /* Move the element to the left */
+  }
+
+    /* Page container styles */
+    .page-container {
+      position: relative;
+      z-index: 1;
+    }
+    .abhead{
+      background-image:url("/images/banner.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 400px;
+    }
+    .abcon span{
+      color: coral;
+      font-weight: 500;
+    }
+
+@media (max-width: 800px) {
+  .abhead{
+    height: 300px;
+  }
+    .abhead h1 {
+        padding-top: 12rem;
+        font-size: 2rem;
+      }
+    
+      .slog {
+        margin-top: 1rem;
+        color: rgb(252, 252, 227);
+      }
+    
+      div.abtcon1,
+      div.abtcont2 {
+        margin-top: 3rem;
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+      div.par3{
+        padding-top: 2rem;
+      }
+    
+      div.par1,
+      div.par3 {
+        width: 100%;
+      }
+    
+      .logob img {
+        width: 100%;
+        max-width: 150px; /* Adjust max-width for smaller screens */
+        margin: 1rem 0;
+      }
+    
+      div.par2 h3 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+    
+      div.par2 li {
+        font-size: 1rem;
+        margin-top: 0.3rem;
+      }
+
+}
