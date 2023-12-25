@@ -25,13 +25,14 @@
     font-size: 70px;
     margin-top: 6rem;
     color: white;
-    text-shadow: 3px 3px 2px rgba(128, 0, 0, 1);
+    text-shadow: 3px 3px 2px rgba(0, 60, 128, 0.925);
 }
 .heading p{
     text-align: center;
     font-size: 2rem;
-    color: whitesmoke;
-    text-shadow: 3px 3px 2px rgba(128, 0, 0, 1);
+    font-weight: 900;
+    color: white;
+    text-shadow: 3px 3px 2px rgba(1, 41, 87, 0.925);
 }
 .info{
     width: 400px;
@@ -120,7 +121,7 @@ div.cent{
         background: none;
     }
     body.contact{
-        background-image: url("/images/mos3-blur.png");
+        background-image: url("/images/mos3-blur.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
