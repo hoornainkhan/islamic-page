@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 .course-container{
     display: flex;
     flex-wrap: wrap;
@@ -12,6 +16,9 @@
     width: 20%; /* Adjusted width */
     margin-right: 20px; /* Added margin for better spacing */
     margin-bottom: 20px;background: linear-gradient(to bottom left, #DED0B6 40%, #FFC39E 100%);
+}
+.card:hover{
+  transform: translateY(-8px);
 }
 .card_image{
     width: 100%;
@@ -58,3 +65,13 @@ input[type="radio"] {
     /* background-color: #3498db; */
     /* border-color: #3498db; */
   /* } */
+  #add-post-card{
+    margin-top: 10%;
+  }
+  #content h3{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    font-weight: 700;
+  }

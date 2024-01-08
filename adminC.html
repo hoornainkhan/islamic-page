@@ -46,10 +46,10 @@
           <a href="/adminC.html"><i class="fa-solid fa-book"></i> Courses</a>
         </li>
         <li>
-          <a href="#"><i class="fa-solid fa-book-bookmark"></i> Publications</a>
+          <a href="/adminPub.html"><i class="fa-solid fa-book-bookmark"></i> Publications</a>
         </li>
         <li>
-          <a href="#"><i class="fa-solid fa-file"></i> Resources</a>
+          <a href="/adminRes.html"><i class="fa-solid fa-file"></i> Resources</a>
         </li>
       </ul>
       <ul class="dets">
@@ -106,6 +106,7 @@
       </div>
 
       <div id="content">
+        <h3>For Women</h3>
         <div class="course-container">
           <!-- Sample course cards -->
           <div class="card" onclick="showCourseForm()">
@@ -138,6 +139,14 @@
               <button class="btn card_btn">Read More</button>
             </div>
           </div>
+        <!-- Add post card -->
+        <div id="add-post-card" onclick="showAddForm()">
+          <i class="fa-solid fa-plus fa-2xl"></i>
+        </div>
+        </div>
+      
+        <h3>For Kids</h3>
+        <div class="course-container">
           <div class="card" onclick="showCourseForm()">
             <div class="card_image"><img src="images/nooraniyah.jpg" /></div>
             <div class="card_content">
@@ -169,23 +178,15 @@
                 <button class="btn card_btn">Read More</button>
               </div>
             </div>
-            <div class="card" onclick="showCourseForm()">
-                <div class="card_image"><img src="images/attributes.jpg" /></div>
-                <div class="card_content">
-                  <h2 class="card_title">Attributes of Allah</h2>
-                  <p class="card_text">
-                    learn 99 names of Allah and Meanings of attributes
-                  </p>
-                  <button class="btn card_btn">Read More</button>
-                </div>
-              </div>
           <!-- Add post card -->
           <div id="add-post-card" onclick="showAddForm()">
             <i class="fa-solid fa-plus fa-2xl"></i>
           </div>
         </div>
         </div>
+        </div>
       </div>
+    </div>
     </section>
     <script>
       function showAddForm() {

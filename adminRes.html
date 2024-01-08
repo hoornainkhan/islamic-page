@@ -6,8 +6,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles.css/admin.css">
   <link rel="stylesheet" href="/styles.css/adminP.css">
-  <link rel="stylesheet" href="/styles.css/adminI.css">
-  <!-- <link rel="stylesheet" href="/styles.css/adminR.css"> -->
+  <link rel="stylesheet" href="/styles.css/adminPub.css">
   <script src="https://kit.fontawesome.com/85dc7f73ae.js" crossorigin="anonymous"></script>
   <title>Posts</title>
 </head>
@@ -60,14 +59,13 @@
               <label for="post-title">Title:</label>
               <br>
               <input type="text" id="post-title" required><br>
-  
-              <label for="post-image">Image:</label>
-              <br>
-              <input type="file" id="post-image" accept="image/*" required><br>
+
+              <label for="pdfFile">Select a PDF file:</label>
+    <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" required>
   
               <label for="post-description">Description:</label>
               <br>
-              <textarea id="post-description" rows="4" required></textarea><br>
+              <textarea id="post-description" rowls="4" required></textarea><br>
               <div class="buttons">
               <button type="button" id="submit-btn" onclick="submitForm()">Add</button>
               <button type="button" id="delete-btn" onclick="deletePost()"><i class="fa-solid fa-trash"></i></button>
@@ -78,20 +76,46 @@
   </div>
   
   <div id="content">
-    <div class="post-container">
-      <!-- sample -->
-      <div onclick="showPostForm()" class="infog"> <div class="card"><img  src="/images/infg.jpeg" alt=""></div></div>
-      <div onclick="showPostForm()" class="infog"> <div class="card"><img  src="/images/infg2.png" alt=""></div></div>
-      <div onclick="showPostForm()" class="infog"> <div class="card"><img  src="/images/infg.jpeg" alt=""></div></div>
-      <div class="addp">
-      <div id="add-post-card" onclick="showAddForm()"><i class="fa-solid fa-plus fa-2xl"></i></div>
-    </div>
-    </div>
+      <div class="container">
+        <h2>Resources</h2>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Namaz</td>
+                <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, quisquam.</td>
+                <td class="pen" onclick="showPostForm()"><i class="fa-solid fa-pen"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Akhlaq</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                <td class="pen" onclick="showPostForm()"><i class="fa-solid fa-pen"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Ibadat</td>
+                <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam </td>
+                <td class="pen" onclick="showPostForm()"><i class="fa-solid fa-pen"></i></td>
+              </tr>
+              <!-- add new publication  -->
+            </tbody>
+          </table>
+            <div class="add" onclick="showAddForm()"><i class="fa-solid fa-plus"></i>Add new Resource</div>
+      </div>
   </div>
   </section>
   <script>
     function showAddForm() {
-    document.getElementById('form-title').innerText = 'Add Infographic';
+    document.getElementById('form-title').innerText = 'Add Resource';
     document.getElementById('post-form').reset();
     document.getElementById('submit-btn').innerHTML = '<i class="fa-solid fa-check"></i>';
     document.getElementById('overlay').style.display = 'flex';
@@ -99,9 +123,9 @@
 }
 
 function showPostForm(title, img, description) {
-    document.getElementById('form-title').innerText = 'Edit Infographic';
+    document.getElementById('form-title').innerText = 'Edit Resource';
     document.getElementById('post-title').value = title;
-    document.getElementById('post-image').value = '';
+    document.getElementById('pdfFile').value = '';
     document.getElementById('post-description').value = description;
     document.getElementById('submit-btn').innerHTML = '<i class="fa-solid fa-pencil"></i>';
     document.getElementById('delete-btn').style.display = 'block';
@@ -114,7 +138,7 @@ function hideOverlay() {
 
 function submitForm() {
   const title = document.getElementById('post-title').value;
-    const image = document.getElementById('post-image').files[0];
+    const image = document.getElementById('pdfFile').files[0];
     const description = document.getElementById('post-description').value;
      // write ur logic here deer
     hideOverlay();
