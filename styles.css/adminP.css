@@ -5,15 +5,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.686);
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
+  z-index: 9;
+  /* scrollbar-width: thin; /* for Firefox */
+  /* scrollbar-color: #888 #ddd; for Firefox */
+  /* For Webkit browsers like Chrome and Safari, you can use the following */
+  /* overflow-y: overlay; */
 }
 
 #form-container {
-  background-color: #fedfac94;
+  background-color: #a5a5a4;
   padding: 20px;
   border-radius: 5px;
+  color: #090e1f;
+  z-index: 9;
 }
 
 .post-card img, #add-post-card{

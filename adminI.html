@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles.css/admin.css">
   <link rel="stylesheet" href="/styles.css/adminP.css">
+  <link rel="stylesheet" href="/styles.css/adminI.css">
+  <!-- <link rel="stylesheet" href="/styles.css/adminR.css"> -->
   <script src="https://kit.fontawesome.com/85dc7f73ae.js" crossorigin="anonymous"></script>
   <title>Posts</title>
 </head>
@@ -76,30 +78,20 @@
   </div>
   
   <div id="content">
-      <div class="post-container">
-          <!-- Sample post cards -->
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post 1"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <div class="post-card" onclick="showPostForm()"><img src="/images/dummy.jpg" alt="post2"></div>
-          <!-- Add post card -->
-          <div id="add-post-card" onclick="showAddForm()"><i class="fa-solid fa-plus fa-2xl"></i></div>
-      </div>
+    <div class="post-container">
+      <!-- sample -->
+      <div onclick="showPostForm()" class="infog"> <div class="card"><img  src="/images/infg.jpeg" alt=""></div></div>
+      <div onclick="showPostForm()" class="infog"> <div class="card"><img  src="/images/infg2.png" alt=""></div></div>
+      <div onclick="showPostForm()" class="infog"> <div class="card"><img  src="/images/infg.jpeg" alt=""></div></div>
+      <div class="addp">
+      <div id="add-post-card" onclick="showAddForm()"><i class="fa-solid fa-plus fa-2xl"></i></div>
+    </div>
+    </div>
   </div>
   </section>
   <script>
     function showAddForm() {
-    document.getElementById('form-title').innerText = 'Add Post';
+    document.getElementById('form-title').innerText = 'Add Infographic';
     document.getElementById('post-form').reset();
     document.getElementById('submit-btn').innerHTML = '<i class="fa-solid fa-check"></i>';
     document.getElementById('overlay').style.display = 'flex';
@@ -107,7 +99,7 @@
 }
 
 function showPostForm(title, img, description) {
-    document.getElementById('form-title').innerText = 'Edit Post';
+    document.getElementById('form-title').innerText = 'Edit Infographic';
     document.getElementById('post-title').value = title;
     document.getElementById('post-image').value = '';
     document.getElementById('post-description').value = description;
