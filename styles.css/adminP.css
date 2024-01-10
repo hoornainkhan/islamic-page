@@ -17,7 +17,9 @@
 }
 
 #form-container {
-  background-color: #a5a5a4;
+  /* background-color: #d9eaf5; */
+  /* background-color: #efd595 */
+  background-color: #d1cfe2;
   padding: 20px;
   border-radius: 5px;
   color: #090e1f;
@@ -43,11 +45,14 @@
   justify-content: space-around;
 }
 #add-post-card{
-  background-color:rgba(163, 163, 163, 0.86);
+  /* background-color:rgba(163, 163, 163, 0.86); */
+  /* background-color: #ce9b01; */
+  background-color: #7ec4c4;
   font-size: 40px;
   border-radius: 10px;
 }
 #add-post-card i{
  padding-top: 50%;
  padding-left: 26%;
+ color: white;
 }
