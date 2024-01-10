@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+< lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles.css/admin.css">
+  <link rel="stylesheet" href="/styles.css/adminR.css">
+  <link rel="stylesheet" href="/styles.css/adminP.css">
+
+  <script src="https://kit.fontawesome.com/85dc7f73ae.js" crossorigin="anonymous"></script>
+  <title>Posts</title>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>Darul Hikmah</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li>
+        <a href="/adminP.html"><i class="fa-solid fa-image"></i> Posts</a>
+      </li>
+      <li>
+        <div class="dropdown">
+          <span class="dropbtn"><i class="fa-brands fa-readme"></i> Read
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <div class="dropdown-content">
+            <a href="/adminR.html">Blogs</a>
+            <a href="/adminI.html">Infographics</a>
+          </div>
+        </div> 
+      </li>
+      <li>
+        <a href="/adminC.html"><i class="fa-solid fa-book"></i> Courses</a>
+      </li>
+      <li>
+        <a href="/adminPub.html"><i class="fa-solid fa-book-bookmark"></i> Publications</a>
+      </li>
+      <li>
+        <a href="/adminRes.html"><i class="fa-solid fa-file"></i> Resources</a>
+      </li>
+    </ul>
+    <ul class="dets">
+      <li>
+        Admin
+      </li>
+      <li>name</li>
+      <li>email@hk.com</li>
+    </ul>
+  </nav>
+  <section class="section" id="blg">
+    <div id="overlay" onclick="hideOverlay()">
+      <div id="form-container" class="card" onclick="event.stopPropagation()">
+        <div class="card-body">
+        <h2 id="form-title">Add Blog</h2>
+      
+        <form id="post-form">
+          <label for="post-title">Title:</label>
+          <br>
+          <input type="text" id="post-title" required><br>
+
+          <label for="post-image">Image:</label>
+          <br>
+          <input type="file" id="post-image" accept="image/*" required><br>
+
+          <label for="post-title">Subtitle:</label>
+          <br>
+          <input type="text" id="post-subtitle" required><br>
+
+          <label for="post-description">Description:</label>
+          <br>
+          <textarea id="post-description" rows="4" required></textarea><br>
+          <button id="addbtn" class="bon" type="button" onclick="addNewPair()"><i class="fa-solid fa-square-plus"></i></button><br>
+          <div id="additionalFieldsContainer"></div>
+
+          <div class="buttons">
+            <button type="button" id="submit-btn" onclick="submitForm()">Add</button>
+            <button type="button" id="delete-btn" onclick="deletePost()"><i class="fa-solid fa-trash"></i></button>
+            <button type="button" id="cancel-btn" onclick="hideOverlay()"><i class="fa-solid fa-circle-xmark"></i></button>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+      <div class="blogscon">
+        <!-- Sample blog cards -->
+
+        <div class="blog-card" onclick="showBlogForm()">
+          <img src="images/blog3.jpg">
+          <h3 class="blog-title">Blog Post Title 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vero perferendis
+            fuga, nobis velit a, quos ex ipsum sed sunt in
+            mollitia similique amet. Enim iure labore deserunt. Dolor, sint!</p>
+          <a href="" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card" onclick="showBlogForm()">
+          <img src="images/blog1.jpg">
+          <h3 class="blog-title">Blog Post Title 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vero perferendis
+            fuga, nobis velit a, quos ex ipsum sed sunt in
+            mollitia similique amet. Enim iure labore deserunt. Dolor, sint!</p>
+          <a href="" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card" onclick="showBlogForm()">
+          <img src="images/blog2.jpg">
+          <h3 class="blog-title">Blog Post Title 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vero perferendis
+            fuga, nobis velit a, quos ex ipsum sed sunt in
+            mollitia similique amet. Enim iure labore deserunt. Dolor, sint!</p>
+          <a href="" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card" onclick="showBlogForm()">
+          <img src="images/blog3.jpg">
+          <h3 class="blog-title">Blog Post Title 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vero perferendis
+            fuga, nobis velit a, quos ex ipsum sed sunt in
+            mollitia similique amet. Enim iure labore deserunt. Dolor, sint!</p>
+          <a href="" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card" onclick="showBlogForm()">
+          <img src="images/blog1.jpg">
+          <h3 class="blog-title">Blog Post Title 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vero perferendis
+            fuga, nobis velit a, quos ex ipsum sed sunt in
+            mollitia similique amet. Enim iure labore deserunt. Dolor, sint!</p>
+          <a href="" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card" onclick="showBlogForm()">
+          <img src="images/blog2.jpg">
+          <h3 class="blog-title">Blog Post Title 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vero perferendis
+            fuga, nobis velit a, quos ex ipsum sed sunt in
+            mollitia similique amet. Enim iure labore deserunt. Dolor, sint!</p>
+          <a href="" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card" onclick="showBlogForm()">
+          <img src="images/blog1.jpg">
+          <h3 class="blog-title">Blog Post Title 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vero perferendis
+            fuga, nobis velit a, quos ex ipsum sed sunt in
+            mollitia similique amet. Enim iure labore deserunt. Dolor, sint!</p>
+          <a href="" class="read-more">Read More</a>
+        </div>
+        <div id="add-post-card" onclick="showAddForm()"><i class="fa-solid fa-plus fa-2xl"></i></div>
+      </div>
+  </section>
+    <script>
+       function showAddForm() {
+    document.getElementById('form-title').innerText = 'Add Post';
+    document.getElementById('post-form').reset();
+    document.getElementById('submit-btn').innerHTML = '<i class="fa-solid fa-check"></i>';
+    document.getElementById('overlay').style.display = 'flex';
+    document.getElementById('delete-btn').style.display = 'none';
+}
+
+function showPostForm(title, img, description) {
+    document.getElementById('form-title').innerText = 'Edit Post';
+    document.getElementById('post-title').value = title;
+    document.getElementById('post-image').value = '';
+    document.getElementById('post-description').value = description;
+    document.getElementById('submit-btn').innerHTML = '<i class="fa-solid fa-pencil"></i>';
+    document.getElementById('delete-btn').style.display = 'block';
+    document.getElementById('overlay').style.display = 'flex';
+}
+      function showAddForm() {
+        document.getElementById('form-title').innerText = 'Add Blog';
+        document.getElementById('post-form').reset();
+        document.getElementById('submit-btn').innerHTML = '<i class="fa-solid fa-check"></i>';
+        document.getElementById('overlay').style.display = 'flex';
+        document.getElementById('delete-btn').style.display = 'none';
+      }
+
+      function showBlogForm(title, img, description) {
+        document.getElementById('form-title').innerText = 'Edit Blog';
+        document.getElementById('post-title').value = title;
+        document.getElementById('post-image').value = '';
+        document.getElementById('post-description').value = description;
+        document.getElementById('submit-btn').innerHTML = '<i class="fa-solid fa-pencil"></i>';
+        document.getElementById('delete-btn').style.display = 'block';
+        document.getElementById('overlay').style.display = 'flex';
+      }
+
+      function hideOverlay() {
+        document.getElementById('overlay').style.display = 'none';
+      }
+      
+      function addNewPair() {
+      const additionalFieldsContainer = document.getElementById("additionalFieldsContainer");
+
+      // Create new input fields for subtitle and description
+      const newSubtitleInput = document.createElement("input");
+      newSubtitleInput.type = "text";
+      newSubtitleInput.placeholder = "Subtitle";
+      newSubtitleInput.name = "additionalSubtitle";
+
+      const newDescriptionInput = document.createElement("textarea");
+      newDescriptionInput.placeholder = "Description";
+      newDescriptionInput.rows = "4";
+      newDescriptionInput.name = "additionalDescription";
+      
+      // Create a button to delete the new pair
+    const deletePairButton = document.createElement("button");
+    const addPairButton = document.getElementById("addbtn");
+    deletePairButton.type = "button";
+    deletePairButton.className = "bon";
+    deletePairButton.innerHTML = '<i class="fa-solid fa-square-minus"></i>';
+    deletePairButton.onclick = function () {
+      additionalFieldsContainer.removeChild(newSubtitleInput);
+      additionalFieldsContainer.removeChild(newDescriptionInput);
+      additionalFieldsContainer.removeChild(deletePairButton);
+      additionalFieldsContainer.removeChild(addPairButton);
+    };
+
+      // Append the new fields and delete button to the container
+      additionalFieldsContainer.appendChild(newSubtitleInput);
+      additionalFieldsContainer.appendChild(newDescriptionInput);
+      additionalFieldsContainer.appendChild(deletePairButton);
+      additionalFieldsContainer.appendChild(addPairButton);
+    }
+      function submitForm() {
+        const title = document.getElementById('post-title').value;
+        const image = document.getElementById('post-image').files[0];
+        const description = document.getElementById('post-description').value;
+        const additionalSubtitleInputs = document.getElementsByName("additionalSubtitle");
+      const additionalDescriptionInputs = document.getElementsByName("additionalDescription");
+
+      const additionalPairs = [];
+      for (let i = 0; i < additionalSubtitleInputs.length; i++) {
+        const subtitle = additionalSubtitleInputs[i].value;
+        const description = additionalDescriptionInputs[i].value;
+        additionalPairs.push({ subtitle, description });
+      }
+        // write ur logic here deer
+        hideOverlay();
+      }
+      function deletePost() {
+        // your deletion logic here deer
+        hideOverlay();
+      }
+      // huehuehue
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+.pen:hover{
+     color: cyan;
+}
+.add{
+    text-align: center;
+    background-color: rgb(125, 136, 136);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: larger;
+}
+.add:hover{
+    background-color: rgb(37, 36, 36);
+    color: rgb(125, 136, 136);
+}
+h2{
+    font-weight: 600;
+}

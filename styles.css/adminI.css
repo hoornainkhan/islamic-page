@@ -1,0 +1,37 @@
+.infog {
+    width: 400px;
+    height: 300px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 255, 0.608) rgba(173, 216, 230, 0.91);
+    margin-bottom: 1rem;
+  }
+  
+  .infog img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .post-container{
+    flex: 1;
+  }
+  .infog::-webkit-scrollbar  {
+    width: 12px;
+  }
+
+  .infog::-webkit-scrollbar-thumb  {
+    background-color: rgba(0, 0, 255, 0.608);
+    border-radius: 10px;
+  }
+
+  .infog::-webkit-scrollbar-track  {
+    background-color: rgba(173, 216, 230, 0.91);
+  }
+ .addp{
+    width: 400px;
+    height: 300px;
+ }
+ #add-post-card{
+    margin:auto;
+    margin-top: 20%;
+ }
