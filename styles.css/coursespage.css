@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -171,7 +172,7 @@ header.active .menuToggle::after
 .main{
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 80px;
    /* margin-left: -100px; */
 }
 
