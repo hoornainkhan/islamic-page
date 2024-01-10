@@ -52,7 +52,7 @@ img {
 }
 
 .btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(133, 20, 20, 0.12);
 }
 
 .cards {
@@ -122,21 +122,28 @@ img {
     padding: 15px;
     padding-left: 30px;
     padding-right: 30px;
-    border-radius: 20px;
-    background-image: linear-gradient(to right bottom, #0b25d4, #1424a0, #1b206e, #1b1a3e, #111111);
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
     margin-left: 40px;
-    transition: 1s;
+    text-transform: uppercase;
     color: aliceblue;
     font-size: large;
-    box-shadow: 0px 20px 40px -14px rgba(0, 0,0,0.25);
+    box-shadow: 0 0 20px #eee;
+    transition: 0.5s;
+
+
+
     
 
 
 }
 .learn:hover{
-    transform: scaleY(1.4);
-    transform: scaleX(1);
-    cursor: pointer;
-    
-    background-image: linear-gradient(to right bottom, #0b25d4, #1424a0, #1b206e, #1b1a3e, #111111);
+  background-position: right center; /* change the direction of the change here */
+  color: #000000;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #26a0da 0%,#6261b3   51%, #15a9ee  80%);
 }
+
+      
+
+        

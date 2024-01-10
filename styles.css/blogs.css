@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 .container{
     width: 90%;
     margin: 0 auto;
@@ -57,7 +58,7 @@
     transition: all 0.3s ease;
 }
 .read-more:hover{
-    background-color: #ee9600;
+    background-color: #f8f0e3;
     cursor: pointer;
 }
 @media screen and (max-width: 768px) {
