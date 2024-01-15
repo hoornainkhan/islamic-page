@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-.contact{
+
+.conta{
     display: flex;
     justify-content: center;
     height: 600px;
@@ -13,7 +13,6 @@
     filter: blur(0px);
 }
 .heading{
-    text-align: center;
     background-image: url("/images/mos3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,16 +22,13 @@
 }
 .heading h1{
     font-size: 70px;
-    margin-top: 6rem;
-    color: white;
-    text-shadow: 3px 3px 2px rgba(0, 60, 128, 0.925);
+    margin-top: 8rem;
+    text-shadow: 1px 1px 2px pink;
+    color: rgb(27, 3, 3);
 }
 .heading p{
     text-align: center;
     font-size: 2rem;
-    font-weight: 900;
-    color: white;
-    text-shadow: 3px 3px 2px rgba(1, 41, 87, 0.925);
 }
 .info{
     width: 400px;
@@ -43,10 +39,6 @@ flex-flow: column;
 justify-content: space-between;
 border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    color: rgb(1, 1, 35);
-}
-.data i{
-    color: rgb(1, 1, 35);
 }
 body.contact {
     height: 100vh;
@@ -121,7 +113,7 @@ div.cent{
         background: none;
     }
     body.contact{
-        background-image: url("/images/mos3-blur.jpg");
+        background-image: url("/images/mos3-blur.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
