@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/Style/adminEdit.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <script src="https://kit.fontawesome.com/85dc7f73ae.js" crossorigin="anonymous"></script>
+    <title>EditBlog</title>
+</head>
+
+<body>
+  <nav id="sidebar">
+    <div>
+      <h3 class="sidebar-header">Darul Hikmah</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li>
+        <a href="/getAdminPost"><i class="fa-solid fa-image"></i> Posts</a>
+      </li>
+      <li>
+        <div class="dropdown">
+          <span class="dropbtn"
+            ><i class="fa-brands fa-readme"></i> Read
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <div class="dropdown-content">
+            <a href="/getAdminBlog">Blogs</a>
+            <a href="/getAdminInfographic">Infographics</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="/getAdminCourse"><i class="fa-solid fa-book"></i> Courses</a>
+      </li>
+      <li>
+        <a href="/getAdminPublication"
+          ><i class="fa-solid fa-book-bookmark"></i> Publications</a
+        >
+      </li>
+      
+    </ul>
+    
+  </nav>
+    <div>
+        <section class="section" id="blg">
+            <div>
+                <h3 class="Heading">Edit Blog</h3>
+            </div>
+            <div class="scroll">
+                <form action="/getBlog/<%= EditBlog._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" value="<%= EditBlog.title %>" required>
+
+                    <div class="form-section">
+                        <label for="imageInput" class="label">Select Image:</label>
+                        <img class="img" src="data:image/png;base64, <%= EditBlog.image %>" alt="Current Image">
+                        <input type="file" id="imageInput" name="images" accept="image/*">
+                        <p>Note: Upload 4 x 3 images for better enhancement. Leave blank to keep the current image.</p>
+                    </div>
+
+                    <div id="subheadingsContainer">
+                        <% EditBlog.sections.forEach((section, index)=> { %>
+                            <div id="section<%= index + 1 %>">
+                                <label for="subheading<%= index + 1 %>">Subheading <%= index + 1 %></label>
+                                <input type="text" name="subheadings[]" value="<%= section.subheading %>" required>
+
+                                <label for="description<%= index + 1 %>">Description <%= index + 1 %></label>
+                                <textarea name="descriptions[]" cols="30" rows="5"
+                                    required><%= section.description %></textarea>
+                            </div>
+                            <button class="removeSubheading" type="button" onclick="cutSection(this)">Remove</button>
+
+                            <% }); %>
+                    </div>
+            </div>
+            <button class="button"><a style="color: #fff; text-decoration: none;" href="/getAdminBlog">Cancel</a></button>
+            <button class="button" type="button" onclick="addSection()">Add Section</button>
+           
+            
+            <button class="button" type="submit">Submit</button>
+            </form>
+
+    </div>
+
+    <script>
+        function addSection() {
+            const container = document.getElementById('subheadingsContainer');
+            const newSection = document.createElement('div');
+            const sectionNumber = container.children.length;
+
+            newSection.id = `section${sectionNumber}`;
+            newSection.innerHTML = `
+                <!-- Your existing section inputs -->
+                <label for="subheading${sectionNumber}">Subheading ${sectionNumber}</label>
+                <input type="text" name="subheadings[]" required>
+    
+                <label for="description${sectionNumber}">Description ${sectionNumber}</label>
+                <textarea name="descriptions[]" cols="30" rows="5" required></textarea>
+    
+                <button type="button" class="removeSubheading" onclick="cutSection(this)">Remove</button>
+            `;
+
+            container.appendChild(newSection);
+        }
+
+        function cutSection(button) {
+            const sectionToRemove = button.parentElement;
+            if (sectionToRemove) {
+                sectionToRemove.remove();
+            }
+        }
+    </script>
+    </section>
+    </div>
+
+</body>
+
+</html>

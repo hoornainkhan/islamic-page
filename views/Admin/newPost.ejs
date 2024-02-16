@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/Style/adminNew.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <script src="https://kit.fontawesome.com/85dc7f73ae.js" crossorigin="anonymous"></script>
+    <title>NewPost</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div>
+        <h3 class="sidebar-header">Darul Hikmah</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+        <li>
+          <a href="/getAdminPost"><i class="fa-solid fa-image"></i> Posts</a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <span class="dropbtn"
+              ><i class="fa-brands fa-readme"></i> Read
+              <i class="fa fa-caret-down"></i>
+            </span>
+            <div class="dropdown-content">
+              <a href="/getAdminBlog">Blogs</a>
+              <a href="/getAdminInfographic">Infographics</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="/getAdminCourse"><i class="fa-solid fa-book"></i> Courses</a>
+        </li>
+        <li>
+          <a href="/getAdminPublication"
+            ><i class="fa-solid fa-book-bookmark"></i> Publications</a
+          >
+        </li>
+        
+      </ul>
+      
+    </nav>
+    <div>
+        <section class="section" id="blg">
+            <div>
+                <h3 class="Heading">Add New Post</h3>
+            </div>
+            <div class="scroll">
+                <form action="/getPost" method="POST" enctype="multipart/form-data" id="PostForm">
+                  <label for="title">Title</label>
+                    <input type="text" name="title" placeholder="">
+                    <label for="description">Description</label>
+                    <input type="text" name="description" placeholder="">
+                    <label for="imageInput">Select Image:</label>
+                    <input type="file" name="images" accept="image/*" required>
+                    <p>Note: Upload square image for better enhancement.</p>
+            </div>
+            <button class="button" type="submit"><a style="color: #fff; text-decoration: none;" href="/getAdminPost">Cancel</a></button>
+            <button class="button" type="submit">Submit</button>
+
+
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>

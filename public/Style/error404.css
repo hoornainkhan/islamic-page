@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  padding: 0%;
+}
+
+h1 {
+  margin-left: 15px;
+  padding-top: 10rem;
+  padding-left: 70px;
+  color: #000000;
+  font-weight: 800;
+  font-size: 45px;
+  margin-bottom: 40px;
+}
+h3{
+    padding-left: 70px;
+}
+
+header {
+  z-index: 9999;
+  /* position:relative; */
+  position: relative;
+  margin-bottom: -40px;
+  width: 100%;
+  /* min-height: 80px; */
+  background-color: #112b45;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+header .logo {
+  color: white;
+  font-size: 1.50em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+header ul {
+  position: relative;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+  float: left;
+}
+
+header ul li a {
+  color: aliceblue;
+  font-size: 0.9em;
+  padding: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul li a:hover {
+  color: #ffffff;
+  background-color: #090e1f;
+}
+
+header ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background-color: #112b45;
+  display: none;
+}
+
+header ul li:hover ul {
+  color: #090e1f;
+  display: block;
+}
+
+header ul li ul li {
+  position: relative;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+/* responsive */
+@media (max-width: 900px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    top: 66px;
+    left: 0;
+    background-color: #112b45;
+    display: none;
+  }
+
+  header.active nav {
+    display: initial;
+  }
+
+  header nav ul li {
+    width: 100%;
+  }
+
+  header nav ul li ul {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+
+  header nav ul li ul {
+    top: 0;
+    left: 0px;
+  }
+
+  header nav ul li:hover ul li {
+    background-color: #090e1f;
+  }
+
+  .menuToggle {
+    position: relative;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menuToggle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transform: translateY(-12px);
+    box-shadow: 0 12px #fff;
+  }
+
+  .menuToggle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transform: translateY(12px);
+  }
+
+  header.active .menuToggle::before {
+    transform: rotate(45deg);
+    box-shadow: 0 0 #fff;
+  }
+
+  header.active .menuToggle::after {
+    transform: rotate(315deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .modal__inner {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+  }
+}
+
+.slogon1 {
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  /* margin-top: 200px; */
+  margin-top: 50px;
+
+}
+
+
+/* footerssssssss? */
+a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.form-control {
+  background: #212529;
+  border-color: #545454;
+}
+
+.form-control:focus {
+  background: #212529;
+}
+
+footer {
+  background: #ffffff;
+}
+
+.footer {
+  height: 100%;
+  margin-top: 220px;
+}

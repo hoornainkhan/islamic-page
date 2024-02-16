@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/Style/coursespage.css">
+    <link rel="stylesheet" href="/static/Style/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+    <title>courses</title>
+</head>
+
+<body>
+
+    <header class="top-0 ">
+        <a href="#" class="logo">DARUL HIKMAH</a>
+        <div class="menuToggle"></div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="">read <b>▼</b></a>
+                    <ul>
+                        <li><a href="/getUserBlogs">blog</a></li>
+                        <li><a href="/getUserInfographics">infographics</a></li>
+                    </ul>
+                </li>
+                <li><a href="/getUserPosts">posts</a></li>
+                <li><a href="/getUserResourcePublications">resources</a></li>
+                <li><a href="/getUserCourses">courses <b>▼</b></a>
+                    <ul>
+                        <li><a href="getUserKidCourses">for Women</a></li>
+                        <li><a href="getUserWomenCourses">for kids</a></li>
+                    </ul>
+                </li>
+                <li><a href="/aboutUs">about</a></li>
+                <li><a href="/contactUs">contact us</a></li>
+                <li><a href="/getuserPublications">publications<b>▼</b></a>
+                    <ul>
+                        <li><a href="/getUserEBookPublications">Ebooks</a></li>
+                        <li><a href="/getUserAcademyPublications">by academy</a></li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <h2 class="courses" id="women">COURSES OFFERED FOR WOMEN</h2>
+    <div class="main">
+        <!-- <h2 class="courses-women">COURSES FOR WOMEN</h2> -->
+        <ul class="cards">
+            <% Courses.forEach(Course=> { %>
+                <% if(Course.category==="For Women" ){ %>
+                    <li class="cards_item   ">
+                        <div class="card">
+                            <div class="card-image"><img src="data:image/png;base64, <%= Course.image %>"
+                                    alt="Uploaded Image"></div>
+                            <div class="card_content">
+                                <h2 class="card_title">
+                                    <%= Course.title %>
+                                </h2>
+                                <button class="butn card_btn"><a href="http://www.google.com"></a>Open</button>
+                            </div>
+                        </div>
+                    </li>
+                    <% }}); %>
+
+        </ul>
+
+    </div>
+
+    <h2 class="courses" id="kids">COURSES OFFERED FOR KIDS</h2>
+    <div class="main kids">
+        <!-- <h2 class="courses-women">COURSES FOR WOMEN</h2> -->
+        <ul class="cards">
+            <% Courses.forEach(Course=> { %>
+                <% if(Course.category==="For Kids" ){ %>
+                    <li class="cards_item">
+                        <div class="card">
+                            <div class="card_image"><img src="data:image/png;base64, <%= Course.image %>"
+                                    alt="Uploaded Image"></div>
+                            <div class="card_content">
+                                <h2 class="card_title">
+                                    <%= Course.title %>
+                                </h2>
+                                <button class="butn card_btn"><a href=/getUserCourse/<%= Course._id %>></a>Open</button>
+                            </div>
+                        </div>
+                    </li>
+                    <% }}); %>
+
+        </ul>
+    </div>
+   
+
+    <footer class="fixed-bottom bg-dark py-4">
+        <div class="container text-white">
+            <div class="row gy-4 gx-5">
+                <div class="col-lg-6 col-md-6 d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="h1">DARUL HIKMAH</h5>
+                        <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div>
+                        <p class="small mb-0">&copy; Copyrights. All rights reserved. Developed by Glittle Software Solutions</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <h5 class="text-white mb-3 text-center ">Quick Links</h5>
+                    <ul class="list-unstyled text-muted d-flex flex-wrap">
+                        <li class="mx-4 pt-3 "><a href="/">Home</a></li>
+                        <li class="mx-4 pt-3  "><a href="/getUserBlogs">Read</a></li>
+                        <li class="mx-4 pt-3 "><a href="/getUserPosts">Posts</a></li>
+                        <li class="mx-4 pt-3 "><a href="/getUserResourcePublications">Resources</a></li>
+                        <li class="mx-4 pt-3 "><a href="/getUserCourses">Courses</a></li>
+                        <li class="mx-4 pt-3 "><a href="/aboutUs">About</a></li>
+                        <li class="mx-4 pt-3 "><a href="/contactUs">Contact Us</a></li>
+                        <li class="mx-4 pt-3 "><a href="/getUserPublications">Publications</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

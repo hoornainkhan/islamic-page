@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+h1{
+margin-left: 15px;
+padding-top: 6rem;
+color: #000000;
+font-weight: 800;
+font-size: 45px;
+margin-bottom: 40px;
+}
+
+  @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px;
+   /* margin-left: -100px; */
+}
+
+
+
+.courses , .courses1 {
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+        margin-top: 130px;
+}
+
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  /* background-size: cover; */
+  display: block;
+  object-fit: cover;
+}
+
+.butn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 800;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.butn:hover {
+  background-color: rgba(133, 20, 20, 0.12);
+}
+
+.cards {
+  display: flex;
+  /* display: block; */
+  flex-wrap: wrap;
+  list-style: none;
+  /* margin: 80px; */
+  padding: 40px;
+
+  /* margin-bottom: 100px; */
+  /* margin-left: 00px; */
+}
+
+.cards_item {
+  display:block;
+  padding: 1rem;
+  /* margin-left: 40px; */
+
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0px;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #DED0B6 40%, #FFC39E 100%);
+  text-align: center;
+}
+
+.card_title {
+  color: #232222;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #575757;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+
+.learn{
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+    margin-left: 40px;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: large;
+    box-shadow: 0 0 20px #eee;
+    transition: 0.5s;
+}
+
+.kids div{
+  background-color: #44b09e;
+background-image: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%);
+}
+.learn:hover{
+  background-position: right center; /* change the direction of the change here */
+  color: #000000;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #26a0da 0%,#6261b3   51%, #15a9ee  80%);
+}
+body{
+  background-image: url("/static/Assets/bg.jpg");
+}

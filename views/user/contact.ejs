@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/Style/home.css" />
+    <link rel="stylesheet" href="/static/Style/contact.css" />
+    <script
+      src="https://kit.fontawesome.com/85dc7f73ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Contact us</title>
+  </head>
+  <body class="contact">
+    <header>
+      <a href="#" class="logo">DARUL HIKMAH</a>
+      <div class="menuToggle"></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="">read <b>▼</b></a>
+            <ul>
+              <li><a href="/getUserBlogs">blog</a></li>
+              <li><a href="/getUserInfographics">infographics</a></li>
+            </ul>
+          </li>
+          <li><a href="/getUserPosts">posts</a></li>
+          <li><a href="/getUserResourcePublications">resources</a></li>
+          <li>
+            <a href="/getUserCourses">courses <b>▼</b></a>
+            <ul>
+              <li><a href="getUserKidCourses">for Women</a></li>
+              <li><a href="getUserWomenCourses">for kids</a></li>
+            </ul>
+          </li>
+          <li><a href="/aboutUs">about</a></li>
+          <li><a href="/contactUs">contact us</a></li>
+          <li>
+            <a href="/getuserPublications">publications<b>▼</b></a>
+            <ul>
+              <li><a href="/getUserEBookPublications">Ebooks</a></li>
+              <li><a href="/getUserAcademyPublications">by academy</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <script>
+      let menuToggle = document.querySelector(".menuToggle");
+      let header = document.querySelector("header");
+      menuToggle.onclick = function () {
+        header.classList.toggle("active");
+      };
+    </script>
+
+    <div class="bg-container"></div>
+    <div class="cent">
+      <div class="conta">
+        <div class="heading">
+          <h1>Contact Us</h1>
+          <p>Connect with us....</p>
+        </div>
+        <div class="info">
+          <div class="details">
+            <div class="name"><h2>DARUL HIKMAH</h2></div>
+            <div class="data">
+              <div class="no">
+                <i class="fa-solid fa-phone fa-xl"></i>040-5687889,+91
+                9876543218
+              </div>
+              <div class="mail">
+                <i class="fa-solid fa-at fa-xl"></i>xyz@dtgb.com
+              </div>
+              <div class="add">
+                <i class="fa-solid fa-building fa-xl"></i>8-2-235, St Marys Road
+                Hyderabad, Andhra Pradesh, 500003 04027705823
+              </div>
+            </div>
+          </div>
+          <div class="icons">
+            <div class="ig"><i class="fab fa-instagram fa-2xl"></i></div>
+            <div class="yt"><i class="fa-brands fa-youtube fa-2xl"></i></div>
+            <div class="fb"><i class="fa-brands fa-facebook fa-2xl"></i></div>
+            <div class="x"><i class="fa-brands fa-x-twitter fa-2xl"></i></div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <script src="/jsfiles/toggle.js"></script>
+  </body>
+</html>
