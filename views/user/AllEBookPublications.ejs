@@ -1,158 +1,120 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- load stylesheets -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"
-    />
-    <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="/static/Style/bootstrap.min.css" />
-    <!-- Bootstrap style -->
-    <link rel="stylesheet" href="/static/Style/tooplate-style.css" />
-    <!-- Templatemo style -->
-    <link rel="stylesheet" href="/static/Style/home.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-  </head>
-
-  <body>
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="/static/Style/resources.css">
+  <link rel="stylesheet" href="/static/Style/home.css" />
+</head>
+<body>
     <header class="start-0 top-0 ">
-      <a href="#" class="logo">DARUL HIKMAH</a>
-      <div class="menuToggle"></div>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li>
-            <a href="">read <b>▼</b></a>
-            <ul>
-              <li><a href="/getUserBlogs">blog</a></li>
-              <li><a href="/getUserInfographics">infographics</a></li>
-            </ul>
-          </li>
-          <li><a href="/getUserPosts">posts</a></li>
-          <li><a href="/getUserResourcePublications">resources</a></li>
-          <li>
-            <a href="/getUserCourses">courses <b>▼</b></a>
-            <ul>
-              <li><a href="getUserKidCourses">for Women</a></li>
-              <li><a href="getUserWomenCourses">for kids</a></li>
-            </ul>
-          </li>
-          <li><a href="/aboutUs">about</a></li>
-          <li><a href="/contactUs">contact us</a></li>
-          <li>
-            <a href="/getuserPublications">publications<b>▼</b></a>
-            <ul>
-              <li><a href="/getUserEBookPublications">Ebooks</a></li>
-              <li><a href="/getUserAcademyPublications">by academy</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <script>
-      let menuToggle = document.querySelector(".menuToggle");
-      let header = document.querySelector("header");
-      menuToggle.onclick = function () {
-        header.classList.toggle("active");
-      };
-    </script>
-
-    <div class="container" style="text-align: center">
-      <div class="tm-main-content">
-        <section class="tm-margin-b-l">
-          <h2 class="heading "  style="margin-top: 6rem;">By E-Books</h2>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            possimus est debitis, dignissimos fuga laborum quam labore optio
-            sunt minima ab, doloremque neque illo laudantium illum voluptas
-            eveniet! Voluptatem, sunt.e. In tincidunt metus sed justo tincidunt
-            sollicitudin. Curabitur magna tellus, condimentum vitae consectetur
-            id, elementum sit amet erat.
-          </p>
-
-          <div class="tm-gallery">
-            <div class="row"  style="margin-top: 4rem;">
-              <% EBookPublications.forEach(Publication=> { %> <%
-              if(Publication.category==="By E-Books"){ %>
-              <figure class="col-lg-3 col-md-4 col-sm-6 col-20 tm-gallery-item">
-                <a href="/getUserPublication/<%= Publication._id %>">
-                  <div class="tm-gallery-item-overlay">
-                    <img
-                      style="background-color: white;"
-                      class="img-fluid tm-img-center"
-                      src="data:image/png;base64, <%= Publication.image %>"
-                      alt="Uploaded Image"
-                    />
-                    <p class="tm-figcaption"><%= Publication.title %></p>
-                  </div>
-                 
-                </a>
-              </figure>
-              <% }}); %>
+        <a href="#" class="logo">DARUL HIKMAH</a>
+        <div class="menuToggle"></div>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li>
+              <a href="">read <b>▼</b></a>
+              <ul>
+                <li><a href="/getUserBlogs">blog</a></li>
+                <li><a href="/getUserInfographics">infographics</a></li>
+              </ul>
+            </li>
+            <li><a href="/getUserPosts">posts</a></li>
+            <li><a href="/getUserResourcePublications">resources</a></li>
+            <li>
+              <a href="/getUserCourses">courses <b>▼</b></a>
+              <ul>
+                <li><a href="getUserKidCourses">for Women</a></li>
+                <li><a href="getUserWomenCourses">for kids</a></li>
+              </ul>
+            </li>
+            <li><a href="/aboutUs">about</a></li>
+            <li><a href="/contactUs">contact us</a></li>
+            <li>
+              <a href="/getuserPublications">publications<b>▼</b></a>
+              <ul>
+                <li><a href="/getUserEBookPublications">Ebooks</a></li>
+                <li><a href="/getUserAcademyPublications">by academy</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+  
+      <script>
+        let menuToggle = document.querySelector(".menuToggle");
+        let header = document.querySelector("header");
+        menuToggle.onclick = function () {
+          header.classList.toggle("active");
+        };
+      </script>
+  
+      <div class="main">
+        <div class="abt">
+            <div class="head"><h2>By E-Books</h2></div>
+            <div class="desc"><p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                possimus est debitis, dignissimos fuga laborum quam labore optio
+                sunt minima ab, doloremque neque illo laudantium illum voluptas
+                eveniet! Voluptatem, sunt.e. In tincidunt metus sed justo tincidunt
+                sollicitudin. Curabitur magna tellus, condimentum vitae consectetur
+                id, elementum sit amet erat.
+              </p></div>
+        </div>
+        <div class="conten">
+            <% EBookPublications.forEach(Publication => { %>
+                <% if (Publication.category === "By E-Books") { %>
+    <div class="recon">
+        <a href="/getUserPublication/<%= Publication._id %>"> 
+            <div class="rescardcon">
+            <div class="img">
+              <img src="data:image/png;base64, <%= Publication.image %>" alt="">
             </div>
-          </div>
-        </section>
-      </div>
+            <div class="title"><%= Publication.title %></div>
+            </div>
+        </a>
     </div>
-
-    <!-- load JS files -->
-    <script src="/static/js/jquery-1.11.3.min.js"></script>
-    <!-- jQuery (https://jquery.com/download/) -->
-    <script src="/static/js/popper.min.js"></script>
-    <!-- Popper (https://popper.js.org/) -->
-    <script src="/static/js/bootstrap.min.js"></script>
-    <!-- Bootstrap (https://getbootstrap.com/) -->
-    <script>
-      $(document).ready(function () {
-        // Update the current year in copyright
-        $(".tm-current-year").text(new Date().getFullYear());
-      });
-    </script>
-     <footer class=" bg-dark py-4">
-      <div class="container text-white">
-          <div class="row gy-4 gx-5">
-              <div class="col-lg-6 col-md-6 d-flex flex-column justify-content-between">
-                  <div>
-                      <h5 class="h1">DARUL HIKMAH</h5>
-                      <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                  </div>
-                  <div>
-                      <p class="small mb-0">&copy; Copyrights. All rights reserved. Developed by Glittle Software Solutions</p>
-                  </div>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                  <h5 class="text-white mb-3 text-center ">Quick Links</h5>
-                  <ul class="list-unstyled text-muted d-flex flex-wrap">
-                      <li class="mx-4 pt-3 "><a href="/">Home</a></li>
-                      <li class="mx-4 pt-3  "><a href="/getUserBlogs">Read</a></li>
-                      <li class="mx-4 pt-3 "><a href="/getUserPosts">Posts</a></li>
-                      <li class="mx-4 pt-3 "><a href="/getUserResourcePublications">Resources</a></li>
-                      <li class="mx-4 pt-3 "><a href="/getUserCourses">Courses</a></li>
-                      <li class="mx-4 pt-3 "><a href="/aboutUs">About</a></li>
-                      <li class="mx-4 pt-3 "><a href="/contactUs">Contact Us</a></li>
-                      <li class="mx-4 pt-3 "><a href="/getUserPublications">Publications</a></li>
-                  </ul>
-              </div>
-          </div>
+        <% } %>
+        <% }); %>
+        </div>
       </div>
-  </footer>
-  </body>
+  
+            <footer class=" bg-dark py-4">
+                <div class="container text-white">
+                    <div class="row gy-4 gx-5">
+                        <div class="col-lg-6 col-md-6 d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="h1">DARUL HIKMAH</h5>
+                                <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            </div>
+                            <div>
+                                <p class="small mb-0">&copy; Copyrights. All rights reserved. Developed by Glittle Software Solutions</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <h5 class="text-white mb-3 text-center ">Quick Links</h5>
+                            <ul class="list-unstyled text-secondary  d-flex flex-wrap">
+                                <li class="mx-4 pt-3 "><a href="/">Home</a></li>
+                                <li class="mx-4 pt-3  "><a href="/getUserBlogs">Read</a></li>
+                                <li class="mx-4 pt-3 "><a href="/getUserPosts">Posts</a></li>
+                                <li class="mx-4 pt-3 "><a href="/getUserResourcePublications">Resources</a></li>
+                                <li class="mx-4 pt-3 "><a href="/getUserCourses">Courses</a></li>
+                                <li class="mx-4 pt-3 "><a href="/aboutUs">About</a></li>
+                                <li class="mx-4 pt-3 "><a href="/contactUs">Contact Us</a></li>
+                                <li class="mx-4 pt-3 "><a href="/getUserPublications">Publications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>  
+</body>
 </html>

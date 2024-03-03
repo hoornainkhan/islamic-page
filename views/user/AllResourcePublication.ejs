@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/static/Style/coursespage.css" />
+    <title>Resorces</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- load stylesheets -->
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="/static/Style/bootstrap.min.css" /> -->
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="/static/Style/tooplate-style.css" />
+    <!-- Templatemo style -->
     <link rel="stylesheet" href="/static/Style/home.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
@@ -16,11 +25,10 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <title>courses</title>
   </head>
 
   <body>
-    <header class="top-0">
+    <header class="start-0 ">
       <a href="#" class="logo">DARUL HIKMAH</a>
       <div class="menuToggle"></div>
       <nav>
@@ -38,8 +46,8 @@
           <li>
             <a href="/getUserCourses">courses <b>▼</b></a>
             <ul>
-              <li><a href="getUserWomenCourses">for Women</a></li>
-              <li><a href="getUserKidCourses">for kids</a></li>
+              <li><a href="getUserKidCourses">for Women</a></li>
+              <li><a href="getUserWomenCourses">for kids</a></li>
             </ul>
           </li>
           <li><a href="/aboutUs">about</a></li>
@@ -63,33 +71,57 @@
       };
     </script>
 
-    <h2 class="courses" id="women">COURSES OFFERED FOR WOMEN</h2>
-    <div class="main">
-      <!-- <h2 class="courses-women">COURSES FOR WOMEN</h2> -->
-      <ul class="cards">
-        <% WomenCourses.forEach(Course=> { %><!-- Just a comment -->
-        <% if(Course.category==="For Women" ){ %>
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image">
-              <img
-                src="data:image/png;base64, <%= Course.image %>"
-                alt="Uploaded Image"
-              />
-            </div>
-            <div class="card_content">
-              <h2 class="card_title"><%= Course.title %></h2>
-              <button class="btn card_btn">
-                <a href="http://www.google.com"></a>Open
-              </button>
+    <div class="container">
+      <div class="tm-main-content">
+        <section class="tm-margin-b-l">
+          <h2 class="heading">All resources</h2>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            possimus est debitis, dignissimos fuga laborum quam labore optio
+            sunt minima ab, doloremque neque illo laudantium illum voluptas
+            eveniet! Voluptatem, sunt.e. In tincidunt metus sed justo tincidunt
+            sollicitudin. Curabitur magna tellus, condimentum vitae consectetur
+            id, elementum sit amet erat.
+          </p>
+
+          <div class="tm-gallery">
+            <div class="row">
+              <% ResourcePublications.forEach(Publication=> { %> <%
+              if(Publication.category==="Resources"){ %>
+              <figure class="col-lg-3 col-md-4 col-sm-6 col-20 tm-gallery-item">
+                <a href="/getUserPublication/<%= Publication._id %>">
+                  <div class="tm-gallery-item-overlay">
+                    <img
+                      class="img-fluid tm-img-center"
+                      src="data:image/png;base64, <%= Publication.image %>"
+                      alt="Uploaded Image"
+                    />
+                  </div>
+                  <p class="tm-figcaption"><%= Publication.title %></p>
+                </a>
+              </figure>
+              <% }}); %>
             </div>
           </div>
-        </li>
-        <% }}); %>
-      </ul>
+        </section>
+      </div>
     </div>
 
-    <footer class=" bg-dark py-4">
+    <!-- load JS files -->
+    <!-- <script src="/static/js/jquery-1.11.3.min.js"></script> -->
+    <!-- jQuery (https://jquery.com/download/) -->
+    <!-- <script src="/static/js/popper.min.js"></script> -->
+    <!-- Popper (https://popper.js.org/) -->
+    <!-- <script src="/static/js/bootstrap.min.js"></script> -->
+    <!-- Bootstrap (https://getbootstrap.com/) -->
+    <!-- <script>
+      $(document).ready(function () {
+        // Update the current year in copyright
+        $(".tm-current-year").text(new Date().getFullYear());
+      });
+    </script> -->
+     <footer class=" bg-dark py-4 start-0 ">
       <div class="container text-white">
           <div class="row gy-4 gx-5">
               <div class="col-lg-6 col-md-6 d-flex flex-column justify-content-between">

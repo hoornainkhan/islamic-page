@@ -49,7 +49,13 @@
           </ul>
         </nav>
       </header>
-
+      <script>
+        let menuToggle = document.querySelector(".menuToggle");
+        let header = document.querySelector("header");
+        menuToggle.onclick = function () {
+          header.classList.toggle("active");
+        };
+      </script>
 
     <h2 class="courses" id="kids">COURSES OFFERED FOR KIDS</h2>
     <div class="main kids">
