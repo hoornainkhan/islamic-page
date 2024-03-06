@@ -7,7 +7,7 @@ header{
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
-    margin-top: 80px;
+    margin-top: 30px;
     /* height: 800px; */
     /* overflow: auto; */
     
@@ -15,11 +15,12 @@ header{
 
   .infographic-card {
     flex: 0 0 30%; /* Adjust the width as needed */
-    margin: px;
+    margin: 10px;
+    height: 500px;
     overflow: auto;
-    height: 900px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
 
   .infographic-card img {

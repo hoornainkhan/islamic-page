@@ -62,7 +62,7 @@
       };
     </script>
     <h1>All INFOGRAPHICS</h1>
-    <div class="infographic-card">
+    <div class="infographics-container">
       <% Infographics.forEach(Infographic=> { %>
       <div class="infographic-card">
         <img
@@ -72,37 +72,10 @@
         <h1><%= Infographic.title %></h1>
         <p><%= Infographic.description %></p>
 
-        <% }); %>
       </div>
+      <% }); %>
     </div>
 
-    <footer class=" bg-dark py-4">
-      <div class="container text-white">
-          <div class="row gy-4 gx-5">
-              <div class="col-lg-6 col-md-6 d-flex flex-column justify-content-between">
-                  <div>
-                      <h5 class="h1">DARUL HIKMAH</h5>
-                      <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                  </div>
-                  <div>
-                      <p class="small mb-0">&copy; Copyrights. All rights reserved. Developed by Glittle Software Solutions</p>
-                  </div>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                  <h5 class="text-white mb-3 text-center ">Quick Links</h5>
-                  <ul class="list-unstyled text-muted d-flex flex-wrap">
-                      <li class="mx-4 pt-3 "><a href="/">Home</a></li>
-                      <li class="mx-4 pt-3  "><a href="/getUserBlogs">Read</a></li>
-                      <li class="mx-4 pt-3 "><a href="/getUserPosts">Posts</a></li>
-                      <li class="mx-4 pt-3 "><a href="/getUserResourcePublications">Resources</a></li>
-                      <li class="mx-4 pt-3 "><a href="/getUserCourses">Courses</a></li>
-                      <li class="mx-4 pt-3 "><a href="/aboutUs">About</a></li>
-                      <li class="mx-4 pt-3 "><a href="/contactUs">Contact Us</a></li>
-                      <li class="mx-4 pt-3 "><a href="/getUserPublications">Publications</a></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </footer>
+   
   </body>
 </html>
