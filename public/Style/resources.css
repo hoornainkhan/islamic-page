@@ -6,8 +6,9 @@
   font-family: "poppins", sans-serif;
 }
 .main {
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  /* height: 50vh; */
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 .head h2 {
   font-size: 3rem;
@@ -85,7 +86,8 @@ div.prev{
   justify-content: center;
   padding: 1rem 1.75rem;
   text-decoration: none;
-  width: 100%;
+  width: 200px;
+  margin: auto;
   border: 0;
   cursor: pointer;
   user-select: none;
